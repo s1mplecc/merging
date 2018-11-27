@@ -1,10 +1,13 @@
 package xyz.s1mple.merging;
 
 import org.junit.Test;
+import xyz.s1mple.merging.exceptions.MergeWithDifferentClassTypeException;
+import xyz.s1mple.merging.model.Entity;
+import xyz.s1mple.merging.model.NoFieldsEntity;
 
 public class MergingTest {
-    @Test(expected = Merging.MergeWithDifferentClassTypeException.class)
+    @Test(expected = MergeWithDifferentClassTypeException.class)
     public void should_throw_MergingException_when_merge_with_different_class_type() {
-        new Person().mergeWith("aaa");
+        new Entity().mergeWith(new NoFieldsEntity());
     }
 }
