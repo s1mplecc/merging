@@ -38,5 +38,4 @@ public interface Merging {
 
         System.out.println(this);
     }
-
 }
