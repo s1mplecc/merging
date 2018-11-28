@@ -16,6 +16,7 @@ import java.util.Set;
 public class Entity implements Merging<Entity> {
     @MergeOn(level = Level.Ignored)
     private String string = "string";
+    @MergeOn
     private int anInt = 1;
     @MergeOn(level = Level.Mandatory)
     private List<String> stringList = Arrays.asList("a", "b", "c");
