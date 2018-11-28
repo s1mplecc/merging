@@ -13,7 +13,7 @@ import java.util.Set;
 
 @ToString
 @Data
-public class Entity implements Merging {
+public class Entity implements Merging<Entity> {
     @MergeOn(level = Level.Ignored)
     private String string = "string";
     private int anInt = 1;
